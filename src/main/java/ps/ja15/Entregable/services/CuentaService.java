@@ -22,7 +22,7 @@ public class CuentaService {
     }
 
     public void delete(Long id){
-        return  cuentaRepository.deleteById(id);
+        cuentaRepository.deleteById(id);
     }
 
 
