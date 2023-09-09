@@ -5,24 +5,23 @@ import lombok.Data;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.Date;
-@Data
-@Entity
 
-public class Transferencia {
+@Entity
+@Data
+ public class Transferencia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "cuenta-origen-id")
+    @JoinColumn(name = "cuenta_origen_id")
     private Cuenta cuentaOrigen;
 
     @ManyToOne
-    @JoinColumn(name = "cuenta-destino-id")
+    @JoinColumn(name = "cuenta_destino_id")
     private Cuenta cuentaDestino;
 
     private BigDecimal monto;
-    private LocalDateTime fecha;
+    private LocalDateTime fechaTransferencia;
 
 }
